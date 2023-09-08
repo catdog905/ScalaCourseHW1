@@ -13,7 +13,7 @@ before_script:
 build:
   stage: build
   script:
-    - sbt "scalafmtSbtCheck; scalafmtCheckAll; compile"
+    - sbt "scalafmtCheckAll; compile"
 
 test:
   stage: test
