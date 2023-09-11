@@ -79,8 +79,8 @@ class CurrencyConverterSpec extends AnyFlatSpec with Matchers {
       "RUB" -> Map("USD" -> BigDecimal(1/72.5))
     )
     val converter = CurrencyConverter(rates)
-    val exchangedRub = converter.exchange(new Money(2, "USD"), "RUB")
-    val exchangedUsd = converter.exchange(new Money(10, "RUB"), "USD")
+    val exchangedRub = converter.exchange(Money(2, "USD"), "RUB")
+    val exchangedUsd = converter.exchange(Money(10, "RUB"), "USD")
     exchangedRub.amount shouldEqual 145
     exchangedRub.currency shouldEqual "RUB"
     exchangedUsd.amount shouldEqual BigDecimal(1/7.25)
